@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Vélo'v au service de ses clients" />
+      <title>Location de Velo'v</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+      <link rel="icon" type="image/png" href="images/favicon_velo.png"/>
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1 class="Title">Site de réservation de vélo'v Lyon</h1>
+    <h2>Comment réserver un vélo'v ?</h2>
+  <!-- Slideshow container -->
+    <section class="slideshow-container">
+      
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade active">
+        <div class="numbertext"></div>
+        <img src="images/lyon1.jpg" >
+        <div class="text"><p>Etape 1<br />
+          Naviguer sur la carte ci-dessous pour trouver votre station vélib. Puis cliquez sur celle-ci.</p></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="images/lyon2.jpg" >
+        <div class="text"><p>Etape 2<br />
+          Ensuite, suivez la procédure de réservation.</p></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="images/lyon3.jpg" >
+        <div class="text"><p>Etape 3<br />
+          Votre vélo'v est réservé pendant 20 min avant d'être annulé.</p></div>
+      </div>
+
+
+
+      <!-- Next and previous buttons -->
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+     
+      
+    </section>
+
+
+
+    <section class="api">
+     <!-- API Google map -->
+        <div id="map"></div>
+     
+     <!-- Station information -->
+      <div id="details">
+    
+        <h1 class="details_title">Détails de la station</h1>
+       
+     <!-- Canvas signature -->   
+        <canvas id="canvas"></canvas>
+        <div class="canvas_all">
+            <button class="canvas_button canvas_validation">Valider</button>
+            <button class="canvas_button canvas_cancellation">Annuler</button>
+            <button class="canvas_button canvas_clear">Effacer</button>
+        </div>
+        
+      
+        <div class="details_all">
+          <p class="details_name"></p>
+          <p class="details_adresse"><span class="details_address"></span></p>
+          <p><span class ="details_stands"></span></p>
+          <p><span class ="details_available"></span></p>
+          <p class="details_station"><span class ="details_status"></span></p>
+          <p class="details_storage"></p>
+
+          
+        <!-- introductory message -->    
+          <p class="details_instruction">Cliquez sur un marqueur pour voir le détails de la station. Les marquers verts vous permettrons de réserver.</p>
+
+        <!-- reservation / cancellation button -->
+          <button id="button">Réservation</button>
+          <button id="button_cancellation">Annuler ma réservation</button>
+        </div>
+      </div>
+    
+    </section> 
+    
+    <footer class="reservation_statut">
+      <h2 class="reservation">Vous n'avez aucune réservation en cours</h2>
+      <div id="time_remaining"></div>
+    </footer>
+
+    
+
+    <script src="js/Utils.js"></script>
+    <script src="js/Canvas.js"></script>
+    <script src="js/Slideshow.js"></script> 
+    <script src="js/Timer.js"></script>
+    <script src="js/MarkerStation.js"></script>
+    <script src="js/App.js"></script>
+    
+    <!-- API Google Map -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDvaWoL8oEhhauDLGfYNdZUf-pSFKward4&callback=initMap" async defer></script>
+
+  </body>
+
+</html>

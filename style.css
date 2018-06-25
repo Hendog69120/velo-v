@@ -1,0 +1,320 @@
+
+body {
+  background-color: rgb(247, 222, 169);
+  font-family: "Trebuchet MS", sans-serif;
+  
+}
+section {
+  display: block;
+}
+
+.Title {
+  font-size: 2.5em;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  border: solid;
+  border-radius: 1em;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position : relative;
+  border: #000000 solid;
+  border-radius: 1em;
+  padding: 0.625em;
+  height: 31.25em;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Images */
+img {
+  width: 100%;
+}
+
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    height: 31.25em;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+.slideshow-container .active {
+  display: block;
+  background: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+
+}
+
+
+
+/* Caption text */
+.text {
+  position: absolute;
+  opacity: 0.95;
+  top: 10em;
+  left: 10em;
+  width: 50%;
+  margin: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: solid rgba(0, 0, 0, 0.6);
+  border-radius: 1em;
+  padding: 2em;
+  font-size: 1.2em;
+}
+
+/* Number text (1/5 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+/* API Google map */
+.api {
+  position: relative;
+  margin-top: 47px;
+}
+
+#map {
+  position: absolute;
+  width: calc(100% - 270px);
+  height: 505px;
+  margin-left: -7px;
+  background-color: grey;
+}
+
+/* Détails de la station */
+#details {
+  position: absolute;
+  border: solid;
+  border-radius: 5px;
+  right: 0;
+  margin-top: 0px;
+  width: 270px;
+  height: 500px;
+  background-color: rgb(221, 203, 164);
+}
+.details_all {
+  padding-top: 20px;
+}
+.details_title {
+  font-size: 24px;
+  font-family: "Comic Sans MS";
+  text-align: center;
+}
+.details_name {
+  text-align: center;
+}
+.details_stands, .details_available {
+  padding-left: 20px;
+}
+.details_adresse, .details_station {
+  padding-left: 10px;
+}
+.details_instruction {
+  text-align: center;
+  font-size: 2em;
+  margin-top: -70px ;
+}
+
+
+button {
+  margin: 80px;
+  border-radius: 10px;
+  border: 5px;
+  padding: 10px;
+  color: grey;
+  font-size: 1em;
+  
+
+}
+button:hover {
+  color: black;
+  background-color: #E71D36;
+}
+#button {
+  display : none;
+}
+.details_station {
+  padding-top: 40px;
+}
+#button_cancellation {
+  display: none;
+}
+/*Countdown*/
+#time_remaining {
+  text-align: center;
+  border: solid;
+  border-radius: 1em;
+  padding: 1em;
+  margin-bottom: 2em;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.5em;
+  display: none;
+}
+
+
+/*canvas*/
+.canvas_all {
+  display: none;
+  margin-top: 200px;
+}
+
+#canvas {
+  position : absolute;
+  background-color: #f2f2f2;
+  width: 270px;
+  height: 200px;
+  display: none;
+}
+
+.canvas_button {
+  margin: 38px 4px 0 5px;
+  border-radius: 10px;
+  border: 5px;
+  padding: 11px;
+  color: grey;
+  font-size: 1em;
+}
+
+footer {  
+  padding-top: 2em;
+  margin-top: 550px;
+  
+}
+
+
+@media screen and (max-width: 791px) {
+  
+  body {
+    width: 100%;
+  }
+  .Title {
+    margin-left: -15px;
+  }
+  h2 {
+    width: 300px;
+    margin-left: 2px;
+  }
+  .slideshow-container {
+    width: 317px;
+    margin-right: 22px;
+  }
+  img {
+    width: 100%;
+    height: 500px;
+  }
+  .text {
+    position: absolute;
+    top: 8em;
+    left: 2em;
+    width: 50%;
+    padding: 2em;
+  }
+  #map {
+    position: relative;
+    width: 96%;
+    margin-left: 0px;
+    overflow: hidden;
+  } 
+  #details {
+    position: relative;
+    border-radius: 5px;
+    right: 0;
+    margin-top: 7px;
+    width: 354px;
+    height: auto; 
+  }
+  .details_all {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  #canvas {
+    
+    width: 100%;
+    height: 300px;
+  }
+  .canvas_all {
+    margin: 340px 0 50px 36px;
+  }
+  
+  footer {
+    padding-top: 0px;
+    margin-top:0px;
+    width: 360px;
+  }
+}
+
+
+
+
